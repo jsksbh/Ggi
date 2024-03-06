@@ -86,7 +86,7 @@ async def tard(_: Client, message: Message):
 
             await message.reply("- تم طرد العضو بنجاح!", reply_to_message_id=message.message_id)
             return
-     else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
+        else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
 
 @app.on_message(filters.command(["الغاء حظر"]))
 def unban_users(client, message):
