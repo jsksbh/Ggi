@@ -15,16 +15,16 @@ from pyrogram.errors import FloodWait
 
 
 
-@zohary.on_message(filters.command(["المالك"],""))
+@app.on_message(filters.command(["المالك"],""))
 async def creator(c,msg):
     x = []
     async for m in zohary.get_chat_members(msg.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
          if m.status == ChatMemberStatus.OWNER:
             x.append(m.user.id)
     if len(x) != 0:        
-       lol = await zohary.get_users(int(x[0]))
+       lol = await client.get_users(int(x[0]))
        if lol.photo:
-         async for photo in zohary.get_chat_photos(x[0],limit=1):
+         async for photo in client.get_chat_photos(x[0],limit=1):
           await msg.reply_photo(photo.file_id,caption=f"ΌᎳΝᎬᎡ | - {lol.mention} 🕷",reply_markup=InlineKeyboardMarkup(
              [              
                [          
