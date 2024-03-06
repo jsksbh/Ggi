@@ -86,5 +86,23 @@ async def tard(_: Client, message: Message):
 
             await message.reply("- تم طرد العضو بنجاح!", reply_to_message_id=message.message_id)
             return
-        else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
+     else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
+
+@app.on_message(filters.command(["unban"]))
+def unban_users(client, message):
+    # Check if the user is an admin
+    if message.from_user.id == message.chat.id:
+        # Check if the message has user IDs
+        if len(message.command) > 1:
+            user_ids = message.command[1:]
+            for user_id in user_ids:
+                # Unban the user
+                client.unban_chat_member(message.chat.id, int(user_id))
+                message.reply(f"User {user_id} has been unbanned successfully!")
+        else:
+            message.reply("Please specify user IDs to unban.")
+    else:
+        message.reply("You are not authorized to perform this action.")
+
+
     
