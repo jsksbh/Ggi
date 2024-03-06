@@ -42,7 +42,7 @@ async def iddd(client, message):
                 ],
             ]
         ),
-    )
+    
 
 
 
