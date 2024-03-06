@@ -9,7 +9,7 @@ iddof = []
 @app.on_message(filters.command(["قفل الايدي","تعطيل الايدي"], ""))
 async def iddlock(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
+   if get.status in ["creator"]:
       if message.chat.id in iddof:
         return await message.reply_text("تم معطل من قبل🔒")
       iddof.append(message.chat.id)
@@ -20,7 +20,7 @@ async def iddlock(client, message):
 @app.on_message(filters.command(["فتح الايدي","تفعيل الايدي"], ""))
 async def iddopen(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
+   if get.status in ["creator"]:
       if not message.chat.id in iddof:
         return await message.reply_text("الايدي مفعل من قبل ✅")
       iddof.remove(message.chat.id)
@@ -55,7 +55,7 @@ iddof = []
 @app.on_message(filters.command(["قفل جمالي","تعطيل جمالي"], ""))
 async def lllock(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
+   if get.status in ["creator"]:
       if message.chat.id in iddof:
         return await message.reply_text("جمالي معطل من قبل✅")
       iddof.append(message.chat.id)
@@ -66,7 +66,7 @@ async def lllock(client, message):
 @app.on_message(filters.command(["فتح جمالي","تفعيل جمالي"], ""))
 async def idljjopen(client, message):
    get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
+   if get.status in ["creator"]:
       if not message.chat.id in iddof:
         return await message.reply_text("جمالي مفعل من قبل✅")
       iddof.remove(message.chat.id)
