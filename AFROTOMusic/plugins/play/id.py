@@ -14,8 +14,6 @@ async def iddlock(client, message):
         return await message.reply_text("تم معطل من قبل🔒")
       iddof.append(message.chat.id)
       return await message.reply_text("تم تعطيل الايدي بنجاح ✅🔒")
-   else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
 @app.on_message(filters.command(["فتح الايدي","تفعيل الايدي"], ""))
 async def iddopen(client, message):
@@ -25,8 +23,6 @@ async def iddopen(client, message):
         return await message.reply_text("الايدي مفعل من قبل ✅")
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح الايدي بنجاح ✅🔓")
-   else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
 
 
