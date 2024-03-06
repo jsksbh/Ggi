@@ -24,7 +24,7 @@ async def iddlock(client, message):
       return await message.reply_text("لازم تكون ادمن \n√")
 
 @app.on_message(
-    command(["فتح الايدي","تفعيل الايدي"])
+    command(["فتح الايدي","تفعيل الايدي"]),
     & filters.group
     ~filters.forwarded
 )
@@ -42,7 +42,7 @@ async def iddopen(client, message):
 
 
 @app.on_message(
-    command(["ايدي","id","ا"])
+    command(["ايدي","id","ا"]),
     & filters.group
     & ~filters.forwarded
 )
@@ -67,7 +67,7 @@ async def iddd(client, message):
 
 iddof = []
 @app.on_message(
-    command(["قفل جمالي","تعطيل جمالي"])
+    command(["قفل جمالي","تعطيل جمالي"]),
     & filters.group
     & ~filters.forwarded
 )
@@ -82,7 +82,7 @@ async def lllock(client, message):
       return await message.reply_text("لازم تكون ادمن\n√")
 
 @app.on_message(
-    command(["فتح جمالي","تفعيل جمالي"])
+    command(["فتح جمالي","تفعيل جمالي"]),
     & filters.group
     & ~filters.forwarded
 )
@@ -123,7 +123,7 @@ async def iddopen(client, message):
 
 
 @app.on_message(
-    command(["جمالي"])
+    command(["جمالي"]),
     & filters.group
     & ~filters.forwarded
 )
