@@ -5,6 +5,7 @@ import requests
 from pyrogram import enums
 import aiohttp
 from pyrogram import filters
+from strings.filters import command
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from AFROTOMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
