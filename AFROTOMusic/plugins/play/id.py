@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client, filters
-from AFROTOOMusic import app
+from AFROTOMusic import app
 import random
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -97,3 +97,4 @@ async def idjjdd(client, message):
         ),
     )
        
+
