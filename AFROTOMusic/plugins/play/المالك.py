@@ -18,7 +18,7 @@ from pyrogram.errors import FloodWait
 @app.on_message(filters.command(["المالك"],""))
 async def creator(c,msg):
     x = []
-    async for m in zohary.get_chat_members(msg.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+    async for m in client.get_chat_members(msg.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
          if m.status == ChatMemberStatus.OWNER:
             x.append(m.user.id)
     if len(x) != 0:        
