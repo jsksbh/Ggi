@@ -15,25 +15,21 @@ from pyrogram.errors import FloodWait
 
 
 
-@app.on_message(filters.command(["المالك"],""))
-async def creator(c,msg):
-    x = []
-    async for m in app.get_chat_members(msg.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
-         if m.status == ChatMemberStatus.OWNER:
-            x.append(m.user.id)
-    if len(x) != 0:        
-       lol = await app.get_users(int(x[0]))
-       if lol.photo:
-         async for photo in app.get_chat_photos(x[0],limit=1):
-          await msg.reply_photo(photo.file_id,caption=f"ΌᎳΝᎬᎡ | - {lol.mention} 🕷",reply_markup=InlineKeyboardMarkup(
-             [              
-               [          
-                 InlineKeyboardButton(lol.first_name, url=f"https://t.me/{lol.username}")
-               ],             
-             ]                 
-            )                     
-          )
-       else:
-        await msg.reply_text(f"ΌᎳΝᎬᎡ | - {lol.mention} 🕷", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(lol.first_name, url=f"https://t.me/{lol.username}")],]))
-    else:
-        await msg.reply_text("الاك محذوف يقلب")
+@app.on_message(command(["المالك"]) & filters.group)
+async def vgdg(client: Client, message: Message):
+      if len(message.command) >= 2:
+         return 
+      else:
+            chat_id = message.chat.id
+            f = "administrators"
+            async for member in client.iter_chat_members(chat_id, filter=f):
+               if member.status == "creator":
+                 id = member.user.id
+                 key = InlineKeyboardMarkup([[InlineKeyboardButton(member.user.first_name, user_id=id)]])
+                 m = await client.get_chat(id)
+                 if m.photo:
+                       photo = await app.download_media(m.photo.big_file_id)
+                       return await message.reply_photo(photo, caption=f"🧞‍♂️ ¦𝙽𝙰𝙼𝙴 :{m.first_name}\n🎯 ¦𝚄𝚂𝙴𝚁 :@{m.username}\n🎃 ¦𝙸𝙳 :{m.id}\n💌 ¦𝙱𝙸𝙾 :{m.bio}\n✨ ¦𝙲𝙷𝙰𝚃: {message.chat.title}\n♻️ ¦𝙸𝙳.𝙲𝙷𝙰𝚃 :{message.chat.id}",reply_markup=key)
+                 else:
+                    return await message.reply("• " + member.user.mention)
+                    
