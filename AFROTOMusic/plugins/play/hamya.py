@@ -88,7 +88,7 @@ async def tard(_: Client, message: Message):
             return
         else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
 
-@app.on_message(filters.command(["الغاء حظر"]))& filters.group)
+@app.on_message(filters.command("الغاء حظر", "") & filters.group)
 async def untard(client, message: Message):
     # Check if the user is an admin
     if message.from_user.id == message.chat.id:
