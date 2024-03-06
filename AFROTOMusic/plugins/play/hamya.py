@@ -19,7 +19,7 @@ async def ktm(_: Client, message: Message):
         elif member["result"]["status"] == "creator":
             if message.reply_to_message.from_user.id in muted: return await message.reply("- هذا المستخدم مكتوم!")
             muted.append(message.reply_to_message.from_user.id)
-            await message.reply("- تم كتم العضو بنجاح!", reply_to_message_id=message.message_id)
+            await message.reply_text(f"تم كتم  العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
             return
         else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
 
