@@ -4,6 +4,7 @@ from AFROTOMusic import app
 import random
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from AFROTOMusic.misc import SUDOERS
 
 
 @app.on_message(filters.regex("^ايدي$") & filters.group)
