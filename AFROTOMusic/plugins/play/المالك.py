@@ -2,21 +2,17 @@ import asyncio
 import os
 import time
 import requests
-from pyrogram import enums
 import aiohttp
-from pyrogram import filters
 from strings.filters import command
+from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from AFROTOMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from AFROTOMusic import app
-from telegraph import upload_file
 from asyncio import gather
 from pyrogram.errors import FloodWait
 
-
-
-@app.on_message(command(["المالك"]) & filters.group)
+@app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]) & filters.group)
 async def vgdg(client: Client, message: Message):
       if len(message.command) >= 2:
          return 
@@ -34,3 +30,5 @@ async def vgdg(client: Client, message: Message):
                  else:
                     return await message.reply("• " + member.user.mention)
                     
+                    
+   
