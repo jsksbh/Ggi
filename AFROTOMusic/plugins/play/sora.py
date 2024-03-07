@@ -15,8 +15,8 @@ from random import  choice, randint
 
 @app.on_message(command(["صوره", "🕷", "صورهه", "صور"]))
 async def ihd(client: Client, message: Message):
+    rl = random.randint(1,90)
     url = f"https://t.me/TTTTRTTRT/{rl}"
-    await client.send_photo(message.chat.id,url,caption="🐉 ¦ تـم اختيـار صوره لـك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
