@@ -6,7 +6,7 @@ from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@app.on_message(filters.regex("^ايدي$") & filters.group & SUDOERS)
+@app.on_message(filters.regex("^ايدي$") & filters.group)
 async def khalid(client: Client, message: Message):
 
     usr = await client.get_chat(message.from_user.id)
