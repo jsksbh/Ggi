@@ -23,9 +23,9 @@ async def ihd(client: Client, message: Message):
 
 @app.on_message(command([f"استوريهات", "استوري"]))
 async def ihd(client: Client, message: Message):
-    rl = random.randint(1,50)
+    rl = random.randint(2,50)
     url = f"https://t.me/yoipopl{rl}"
-    await client.send_video(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الاستوري  لـك",
+    await client.send_audio(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الاستوري  لـك",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
