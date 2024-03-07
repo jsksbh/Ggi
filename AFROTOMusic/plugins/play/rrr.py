@@ -16,4 +16,4 @@ from pyrogram.errors import FloodWait
 async def caesarphoto(client, message):
     chat_id = message.chat.id
     photo = await client.download_media(message.chat.photo.big_file_id)
-    await client.send_photo(chat_id=chat_id, photo=photo, caption=f"تم تغيير صورة المجموعه \n الي غيرها :{message.from_user.mention}"
+    await client.send_photo(chat_id=chat_id, photo=photo, caption=f"تم تغيير صورة المجموعه \n الي غيرها :{message.from_user.mention}")
