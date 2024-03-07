@@ -32,7 +32,7 @@ txt = [
         
 
 
-@app.on_message(filters.command(["بوت","يا بوت"], ""))
+@app.on_message(filters.command(["صوره","صورة"], ""))
 
 async def khyrok(client: Client, message: Message):
 
