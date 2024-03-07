@@ -7,7 +7,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from AFROTOMusic.misc import SUDOERS
 
 
-@app.on_message(filters.regex("^ايدي$") & filters.group)
+@app.on_message(filters.regex("^ايدي$") & filters.group & SUDOERS)
 async def khalid(client: Client, message: Message):
 
     usr = await client.get_chat(message.from_user.id)
