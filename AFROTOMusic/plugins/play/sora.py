@@ -15,17 +15,28 @@ from pyrogram import filters, Client
 
 
 
-url = f"https://t.me/vnnkli/{rl}"
+txt = [
+
+
+"ها عايز اي 🙄",
+"ايوااا جااااي 😂",
+"عاوزني اشقطلك مين يروحي 🥺",
+"ايوة قول عاوز اي 🤔",
+"قلب البوت 🥺",
+"يعم تعبتنا معاك 🙁",
+"استنا يعم بشقط وجايبك علطول 😂",
+
+        ]
 
 
         
 
 
-@app.on_message(filters.command(["صوره"," صورة"], ""))
+@app.on_message(filters.command(["بوت","يا بوت"], ""))
 
 async def khyrok(client: Client, message: Message):
 
-      a = random.choice(rl)
+      a = random.choice(txt)
 
       await message.reply(
 
