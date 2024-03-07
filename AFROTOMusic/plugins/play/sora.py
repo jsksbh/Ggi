@@ -6,10 +6,10 @@ from AFROTOMusic import app
 import random
     
 
-@app.on_message(command([f"صوره", "صورة", "صور", "{BOT_USERNAME} صوره"]))
+@app.on_message(command([f"صوره", "صورة", "صور"]))
 async def ihd(client: Client, message: Message):
-    rl = random.randint(8,20)
-    url = f"https://t.me/TTTTRTTRT/{rl}"
+    rl = random.randint(2,50)
+    url = f"https://t.me/vnnkli/{rl}"
     await client.send_photo(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الصوره لـك",
     reply_markup=InlineKeyboardMarkup(
             [
