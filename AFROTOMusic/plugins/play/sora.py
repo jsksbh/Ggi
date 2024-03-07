@@ -20,3 +20,19 @@ async def ihd(client: Client, message: Message):
             ]
         )
                            )
+
+@app.on_message(command([f"استوريهات", "استوري"]))
+async def ihd(client: Client, message: Message):
+    rl = random.randint(1,50)
+    url = f"https://t.me/yoipopl{rl}"
+    await client.send_audio(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الاستوري  لـك",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+                           )
+    
