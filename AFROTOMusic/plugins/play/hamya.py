@@ -19,7 +19,7 @@ async def ktm(_: Client, message: Message):
         elif member["result"]["status"] == "creator":
             if message.reply_to_message.from_user.id in muted: return await message.reply("- هذا المستخدم مكتوم!")
             muted.append(message.reply_to_message.from_user.id)
-            await message.reply_text(f"تم كتم  العضو\n│ \n└ʙʏ : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
+            await message.reply_text(f"تم كتم  العضو\n│ \n: {message.reply_to_message.from_user.mention}\n\n بنجاح ")
             return
         else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
 
@@ -31,13 +31,13 @@ async def unktm(_: Client, message: Message):
         if member["result"]["status"] == "administrator":
             if message.reply_to_message.from_user.id not in muted: return await message.reply("- هذا المستخدم غير مكتوم!")
             muted.remove(message.reply_to_message.from_user.id)
-            await message.reply_text(f"تم الغاء  العضو\n│ \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
+            await message.reply_text(f"تم الغاء كتم العضو\n│ \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
 
             return
         elif member["result"]["status"] == "creator":
             if message.reply_to_message.from_user.id not in muted: return await message.reply("- هذا المستخدم غير مكتوم!")
             muted.remove(message.reply_to_message.from_user.id)
-            await message.reply_text(f"تم الغاء كت  العضو\n: {message.reply_to_message.from_user.mention}\n\n بنجاح ")
+            await message.reply_text(f"تم الغاء كتم  العضو\n: {message.reply_to_message.from_user.mention}\n\n بنجاح ")
 
             return
         else: await message.reply_text("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
@@ -75,16 +75,15 @@ async def tard(_: Client, message: Message):
         if member["result"]["status"] == "administrator":
             if memberB["result"]["status"] in ["creator", "administrator"]:return await message.reply("- لا يمكنك طرد مشرف او مالك", reply_to_message_id=message.message_id)
             try:await app.ban_chat_member(message.chat.id, message.reply_to_message.from_user.id)
-            except: return await message.reply_text(f"ليس لدي صلاحيات لطرد هذا العضو\n│ \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
-
-            await message.reply_text(f"تم طرد العضو \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
+            except: return await message.reply_text(f"ليس لدي صلاحيات حظر هذا العضو\n│ \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
+            await message.reply_text(f"تم حظر العضو \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
 
             return
         elif member["result"]["status"] == "creator":
             try:await app.ban_chat_member(message.chat.id, message.reply_to_message.from_user.id)
             except: return await message.reply_text(f"ليس لدي صلاحيات لطرد العضو\n: {message.reply_to_message.from_user.mention}\n\n  بنجاح")
 
-            await message.reply("- تم طرد العضو بنجاح!", reply_to_message_id=message.message_id)
+            await message.reply_text(f"تم حظر العضو \n : {message.reply_to_message.from_user.mention}\n\n بنجاح ")
             return
         else: await message.reply("- يجب ان تكون ادمن على الاقل لإستخدام هذا الامر.", reply_to_message_id=message.message_id)
 
