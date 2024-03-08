@@ -10,7 +10,7 @@ import pytz
 from AFROTOMusic.core.call import Zelzaly
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from AFROTOMusic.core.call import Anon
+from AFROTOMusic.core.call import Zelzaly
 from AFROTOMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError,AlreadyJoinedError)
 from pyrogram.errors import (
