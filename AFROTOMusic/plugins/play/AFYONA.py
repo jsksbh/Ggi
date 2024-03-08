@@ -63,7 +63,7 @@ async def cpanel(_, message: Message):
               reply_markup=reply_markup
         )
 
-@app.on_message(filters.regex("قفل الكيبورد") & filters.group)
+@app.on_message(filters.regex("قفل الكيبورد"))
 async def down(client, message):
           m = await message.reply("**- تم اغلاق الكيبورد بنجاح**", reply_markup= ReplyKeyboardRemove(selective=True))
 
