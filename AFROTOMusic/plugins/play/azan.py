@@ -44,7 +44,7 @@ async def kill():
 
 
 async def play(i):
-  assistant = await group_assistant(Anon,i)
+  assistant = await group_assistant(Zelzaly,i)
   file_path = "./AFROTOMusic/assets/azan.m4a"
   stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
   try:
