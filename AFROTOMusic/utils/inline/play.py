@@ -9,7 +9,6 @@ from pyrogram.types import Message, InlineKeyboardButton
 
 from AFROTOMusic.utils.formatters import time_to_seconds
 
-@app.on_message(command(["مطور البوت", "مطور", "المطور"]))
 async def zdatsr(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
