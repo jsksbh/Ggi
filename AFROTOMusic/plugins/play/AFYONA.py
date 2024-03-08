@@ -1,13 +1,23 @@
 import asyncio
 from pyrogram import Client, filters
-from strings import get_string
 from strings.filters import command
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
-from AFROTOMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from ZeMusic.utils.decorators import AdminActual
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    ReplyKeyboardMarkup,
+    ReplyKeyboardRemove,
+    InputMediaPhoto,
+    Message,
+)
+from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+
+
+REPLY_MESSAGE = "**- اهلا بك عزيزي اليك قائمه الاوامر**"
 
 
 
-REPLY_MESSAGE = "**صلي علي اشرف خلق الله 🥹✨**"
 
 REPLY_MESSAGE_BUTTONS = [
     [
@@ -50,11 +60,17 @@ REPLY_MESSAGE_BUTTONS = [
         ("لو خيروك"),
         ("احساب العمر")
     ],    
-
+    [
+        ("اخفاء الازرار")
+    ]
   
 ]
 
-@app.on_message(filters.regex("^/start"), group=39)
+
+
+  
+
+@app.on_message(filters.regex("^الاوامر$"))
 async def cpanel(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
@@ -63,9 +79,10 @@ async def cpanel(_, message: Message):
               reply_markup=reply_markup
         )
 
-@app.on_message(filters.regex("قفل الكيبورد"))
+@app.on_message(filters.regex("اخفاء الازرار") & filters.group)
 async def down(client, message):
-          m = await message.reply("**- تم اغلاق الكيبورد بنجاح**", reply_markup= ReplyKeyboardRemove(selective=True))
+          m = await message.reply("**- بخدمتك حجي خفيت الازرار\n- اذا تريد تطلعها مرة ثانية اكتب الاوامر**", reply_markup= ReplyKeyboardRemove(selective=True))
+
 
 @app.on_message(filters.regex("يـوتيوب. 📽"))
 def reply_to_HEY(Client, message):
