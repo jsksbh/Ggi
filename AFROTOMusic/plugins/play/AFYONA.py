@@ -81,7 +81,7 @@ async def cpanel(_, message: Message):
 
 @app.on_message(filters.regex("اخفاء الازرار"))
 async def down(client, message):
-          m = await message.reply("**- بخدمتك حجي خفيت الازرار\n- اذا تريد تطلعها مرة ثانية اكتب /start**", reply_markup= ReplyKeyboardRemove(selective=True))
+          m = await message.reply("**تم قفل الكيبورد بنجاح**", reply_markup= ReplyKeyboardRemove(selective=True))
 
 
 @app.on_message(filters.regex("يـوتيوب. 📽"))
