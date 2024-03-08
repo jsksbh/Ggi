@@ -5,7 +5,7 @@ from AFROTOMusic import app
 from config import OWNER_ID, LOGGER_ID
 from pyrogram import Client, filters, emoji
 from strings.filters import command
-from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardButton
 
 from AFROTOMusic.utils.formatters import time_to_seconds
 
