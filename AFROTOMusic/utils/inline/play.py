@@ -3,6 +3,7 @@ import math
 import config
 from AFROTOMusic import app 
 from config import OWNER_ID, LOGGER_ID
+from strings.filters import command
 from pyrogram.types import InlineKeyboardButton
 
 from AFROTOMusic.utils.formatters import time_to_seconds
