@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client, filters
-from AFROTOMusic.filters import command
+from strings.filters import command
 from AFROTOMusic.utils.decorators import AdminActual
 from pyrogram.types import (
     CallbackQuery,
