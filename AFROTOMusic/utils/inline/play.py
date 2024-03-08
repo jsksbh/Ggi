@@ -2,11 +2,14 @@ import math
 
 import config
 from AFROTOMusic import app 
-
+from config import OWNER_ID, LOGGER_ID
 from pyrogram.types import InlineKeyboardButton
 
 from AFROTOMusic.utils.formatters import time_to_seconds
 
+usr = await client.get_users(OWNER_ID)
+    name = usr.first_name
+    usrnam = usr.username
 
 def track_markup(_, videoid, user_id, channel, fplay):
    
@@ -70,7 +73,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="𝚂𝙺𝙸𝙿 ‌", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="𝚂𝚃𝙾𝙿 ", callback_data=f"ADMIN Stop|{chat_id}"),
         ],[    
-            InlineKeyboardButton(text="𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 ", user_id=config.OWNER_ID),
+            InlineKeyboardButton(name, url=f"https://t.me/{usrnam}
         ],[
             InlineKeyboardButton(text=" اضف البوت الي مجموعتك او قناتك ", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -84,10 +87,12 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="𝙿𝙰𝚞𝚂𝙴 ", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="𝙴𝙿𝙻𝙰𝚈 ", callback_data=f"ADMIN Replay|{chat_id}"),
         ],[
-            InlineKeyboardButton(text="𝚂𝙺𝙸𝙿 ‌", callback_data=f"ADMIN Skip|{chat_id}"),
+         
+            InlineKeyboardButton(text="𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 ", user_id=config.OWNER_ID),
+        ],[   InlineKeyboardButton(text="𝚂𝙺𝙸𝙿 ‌", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="𝚂𝚃𝙾𝙿 ", callback_data=f"ADMIN Stop|{chat_id}"),
         ],[
-            InlineKeyboardButton(text="𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 ", user_id=config.OWNER_ID),
+            InlineKeyboardButton(name, url=f"https://t.me/{usrnam}
         ],[
             InlineKeyboardButton(text="داضف البوت الي مجموعتك او قناتك ", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
