@@ -9,9 +9,9 @@ from pyrogram.types import Message, InlineKeyboardButton
 
 from AFROTOMusic.utils.formatters import time_to_seconds
    
-usr = await client.get_users(OWNER_ID)
-    name = usr.first_name
-    usrnam = usr.username
+usr = await client.get_users(OWNER_ID) 
+name = usr.first_name 
+usrnam = usr.username
 
 def track_markup(_, videoid, user_id, channel, fplay):
    
