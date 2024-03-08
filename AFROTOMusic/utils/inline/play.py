@@ -7,9 +7,7 @@ from pyrogram import Client, filters, emoji
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardButton
 
-from AFROTOMusic.utils.formatters import time_to_seconds
-
-async def zdatsr(client: Client, message: Message):
+from AFROTOMusic.utils.formatters import time_to_second
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
     usrnam = usr.username
