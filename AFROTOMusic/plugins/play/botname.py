@@ -1,15 +1,15 @@
 import asyncio
 import random
-from AnonX.misc import SUDOERS
+from AFROTOMusic.misc import SUDOERS
 from pyrogram.types import (Message,InlineKeyboardButton,InlineKeyboardMarkup)
 from pyrogram import filters, Client
-from AnonX import app
+from AFROTOMusic import app
 from config import *
 
 bot_name = {}
 botname = {}
 
-name = "مرعب"
+name = "عفرتو"
 
 @app.on_message(filters.regex("تعيين اسم البوت")& filters.private & SUDOERS, group=7113)
 async def set_bot_name(client, message):
