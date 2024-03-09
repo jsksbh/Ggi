@@ -124,10 +124,7 @@ async def get_thumb(videoid):
             stroke_fill="white",
             font=font,
         )
-            # description
-            views = f"Views : {views}"
-            duration = f"Duration : {duration} Mins"
-            channel = f"Channel : @UI_VM"
+            
 
             image4.text((670, 450), text=views, fill="white", font=font4, align="left")
             image4.text(
