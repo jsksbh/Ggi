@@ -25,24 +25,60 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def get_thumb(client, username, photo):
-        if os.path.isfile(f"{username}.png"):
-           return f"{username}.png"
-        users = len(await get_served_users(client))
-        chats = len(await get_served_chats(client))
-        url = f"https://www.youtube.com/watch?v=gKA2XFkJZhI"
-        results = VideosSearch(url, limit=1)
-        for result in (await results.next())["result"]:
-            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+def truncate(text):
+    list = text.split(" ")
+    text1 = ""
+    text2 = ""
+    for i in list:
+        if len(text1) + len(i) < 30:
+            text1 += " " + i
+        elif len(text2) + len(i) < 30:
+            text2 += " " + i
 
-        async with aiohttp.ClientSession() as session:
-            async with session.get(thumbnail) as resp:
-                if resp.status == 200:
-                    f = await aiofiles.open(f"thumb{username}.png", mode="wb")
-                    await f.write(await resp.read())
-                    await f.close()
+    text1 = text1.strip()
+    text2 = text2.strip()
+    return [text1, text2]
 
-        youtube = Image.open(f"{photo}")
+
+async def get_thumb(videoid):
+    try:
+        if os.path.isfile(f"cache/{videoid}.jpg"):
+            return f"cache/{videoid}.jpg"
+
+        url = f"https://www.youtube.com/watch?v={videoid}"
+        if 1 == 1:
+            results = VideosSearch(url, limit=1)
+            for result in (await results.next())["result"]:
+                try:
+                    title = result["title"]
+                    title = re.sub("\W+", " ", title)
+                    title = title.title()
+                except:
+                    title = "Unsupported Title"
+                try:
+                    duration = result["duration"]
+                except:
+                    duration = "Unknown Mins"
+                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+                try:
+                    views = result["viewCount"]["short"]
+                except:
+                    views = "Unknown Views"
+                try:
+                    channel = result["channel"]["name"]
+                except:
+                    channel = "Unknown Channel"
+
+            async with aiohttp.ClientSession() as session:
+                async with session.get(
+                    f"http://img.youtube.com/vi/{videoid}/maxresdefault.jpg"
+                ) as resp:
+                    if resp.status == 200:
+                        f = await aiofiles.open(f"cache/thumb{videoid}.jpg", mode="wb")
+                        await f.write(await resp.read())
+                        await f.close()
+
+            youtube = Image.open(f"{photo}")
         Mostafa = Image.open(f"{photo}")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
@@ -88,35 +124,25 @@ async def get_thumb(client, username, photo):
             stroke_fill="white",
             font=font,
         )
+            # description
+            views = f"Views : {views}"
+            duration = f"Duration : {duration} Mins"
+            channel = f"Channel : @UI_VM"
 
-        draw.text(
-            (600, 400),
-            f"user : {users}",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 450),
-            f"chats : {chats}",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 500),
-            f"Version : 0.1.5",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 550),
-            f"BoT : t.me\{username}",
-            (255, 255, 255),
-            font=arial,
-        )
-        try:
-            os.remove(f"thumb{username}.png")
-        except:
-            pass
-        background.save(f"{username}.png")
-        return f"{username}.png"
-        
+            image4.text((670, 450), text=views, fill="white", font=font4, align="left")
+            image4.text(
+                (670, 500), text=duration, fill="white", font=font4, align="left"
+            )
+            image4.text(
+                (670, 550), text=channel, fill="white", font=font4, align="left"
+            )
+
+            image2 = ImageOps.expand(image2, border=20, fill=make_col())
+            image2 = image2.convert("RGB")
+            image2.save(f"cache/{videoid}.jpg")
+            file = f"cache/{videoid}.jpg"
+            return file
+    except Exception as e:
+        print(e)
+        return YOUTUBE_IMG_URL
+
