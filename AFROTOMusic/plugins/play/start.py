@@ -13,10 +13,12 @@ from AFROTOMusic.misc import HAPP, SUDOERS, XCB
 from config import OWNER_ID
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from pyrogram.errors import MessageNotModified
+from config import BANNED_USERS
+from AFROTOMusic.utils.decorators.language import LanguageStart
 
 
-
-@app.on_message(filters.regex("^/start"), group=39)
+@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
+@LanguageStart
 async def cr_source(client: Client, message: Message):
     await message.reply_video(
       video=f"https://telegra.ph/file/0913f5246d0532e170e21.mp4",
