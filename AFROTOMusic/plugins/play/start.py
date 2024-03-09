@@ -18,7 +18,7 @@ from AFROTOMusic.utils.decorators.language import LanguageStart
 
 
 @app.on_message(
-     command(["/help", "الاوامر"])
+     command(["/start", "/help"])
 )
 async def khalid(client: Client, message: Message):
     await message.reply_photo(
