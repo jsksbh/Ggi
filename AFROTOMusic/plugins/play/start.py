@@ -17,33 +17,30 @@ from config import BANNED_USERS
 from AFROTOMusic.utils.decorators.language import LanguageStart
 
 
-@app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
-@LanguageStart
-async def cr_source(client: Client, message: Message):
-    await message.reply_video(
-      video=f"https://telegra.ph/file/0913f5246d0532e170e21.mp4",
-        caption=f"""<b>⭓𝙼𝚄𝚂𝙸𝙲✘𝙰𝙵𝚁𝙾𝚃𝙾𝙾 ♪\n<b>⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼</b>""",
+@app.on_message(
+     command(["/help", "الاوامر"])
+)
+async def khalid(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/c6c72a67afca445b3175a.jpg",
+caption=f"""**[᥉ᥱᥣᥣᥴƚ ᥣᥲ️ꪀᘜυᥲ️ᘜᥱ ƚ᥆ ᥣᥱᥲ️ᖇꪀ ꪔ᥆ᖇᥱ](https://t.me/N_G_12)**""",
         reply_markup=InlineKeyboardMarkup(
-                   [
+            [
+                [
+                InlineKeyboardButton(
+                    "عربي 🇪🇬", callback_data="arbic"
+                ),
+                ],
                 [
                     InlineKeyboardButton(
-                        "اوامر التشغيل", callback_data="zzzll"),
-                    InlineKeyboardButton(
-                        "اوامر القنوات", callback_data="zzzch"),
-                ],[
-                    
-                    InlineKeyboardButton(
-                        "اوامر الادمن", callback_data="zzzad"),
- 
-                    InlineKeyboardButton(
-                     " اوامــر المطــور ", callback_data="zzzdv"),
-                 ],[
-                    InlineKeyboardButton(
-                        "•✯ ᯓ 「𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾」، ⦃𓏛 ✯•", url="https://t.me/UI_VM"),
+                        "English 🇺🇲", callback_data="english"),
                 ],
             ]
         ),
     )
+
+
+
     
 @app.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
