@@ -25,7 +25,7 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def get_bot(client, username, photo):
+async def get_thumb(client, username, photo):
         if os.path.isfile(f"{username}.png"):
            return f"{username}.png"
         users = len(await get_served_users(client))
