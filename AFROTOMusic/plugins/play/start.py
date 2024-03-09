@@ -16,9 +16,7 @@ from pyrogram.errors import MessageNotModified
 
 
 
-@app.on_message(
-    command("^/start")
-)
+@app.on_message(filters.regex("^/start"), group=39)
 async def cr_source(client: Client, message: Message):
     await message.reply_video(
       video=f"https://telegra.ph/file/0913f5246d0532e170e21.mp4",
