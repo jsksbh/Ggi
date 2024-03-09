@@ -17,7 +17,7 @@ from pyrogram.errors import MessageNotModified
 
 
 @app.on_message(
-    command("/start")
+    command("^/start")
 )
 async def cr_source(client: Client, message: Message):
     await message.reply_video(
