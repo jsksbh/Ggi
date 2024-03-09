@@ -37,302 +37,328 @@ caption=f"""**[᥉ᥱᥣᥣᥴƚ ᥣᥲ️ꪀᘜυᥲ️ᘜᥱ ƚ᥆ ᥣᥱᥲ�
         ),
     )
 
-
-
-    
-@app.on_callback_query(filters.regex("zzzback"))
-async def zzzback(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""<b>⭓𝙼𝚄𝚂𝙸𝙲✘𝙰𝙵𝚁𝙾𝚃𝙾𝙾 ♪\n<b>⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼""",
+@Client.on_callback_query(filters.regex("arbic"))
+async def arbic(_, query: CallbackQuery):
+    await query.answer("home start")
+    await query.edit_message_text(
+        f""" 🐰**[مرحبا بك] [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ! \n
+※ [انا بوت تشغيل الأغاني والفيديو  في المكالمه المرئية](https://t.me/N_G_12) \n
+※[لاظهار كيبورد الاعضاء اضغط](https://t.me/N_G_12) /AFYN \n
+※ [في حال مواجهه اي مشكله انضم هنا](https://t.me/N_G_12)\n [ᖴ᥆ᖇ ᥲ️ᖇꪀ᥆ρ. 🐰](https://t.me/Y_H_U_4)
+※ [استخدم الازرار لمعرفه الاوامر المستخدمه.](https://t.me/N_G_12) """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "اوامر التشغيل", callback_data="zzzll"),
+                        "اضف البوت اللي مجموعتك ",
+                        url=f"https://t.me/{app.username}?startgroup=true",
+                    )
+                ],
+                [InlineKeyboardButton("الدعم والتواصل", url=f"https://t.me/Ng_333"),
+                
+InlineKeyboardButton("لتفعيل كيبورد الاعضاء", callback_data="afyona"),
+                ],
+                [                   InlineKeyboardButton("طريقة التشغيل", callback_data="bcmds"),
+                    InlineKeyboardButton("طريقة التفعيل", callback_data="bhowtouse"),
+                ],
+                [
                     InlineKeyboardButton(
-                        "اوامر القنوات", callback_data="zzzch"),
-                ],[
-                    
+                        "الجروب", url=f"https://t.me/Ng_333"
+                    ),
                     InlineKeyboardButton(
-                        "اوامر الادمن", callback_data="zzzad"),
+                        "القناة", url=f"https://t.me/N_G_12"
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉", url="https://t.me/Ng_103"
+                    )
+                ],
+            ]
+        ),
+        disable_web_page_preview=True,
+    )
 
+@Client.on_callback_query(filters.regex("english"))
+async def english(_, query: CallbackQuery):
+    await query.answer("home start")
+    await query.edit_message_text(
+        f" [※A Telegram Music Bot Based Mongodb](https://t.me/N_G_12) \n ※[Add Me To Ur Chat For and Help and And Support Click On Buttons](https://t.me/Y_H_U_4) \n ※[These Features AI Based](https://t.me/N_G_12)",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
                     InlineKeyboardButton(
-                            " اوامــر المطــور ", callback_data="zzzdv"),
-                ],[ 
+                        "Add me to your Group ",
+                        url=f"https://t.me/{app.username}?startgroup=true",
+                    )
+                ],
+                [InlineKeyboardButton(" Basic Guide", callback_data="cbhowtouse"),
+                
+InlineKeyboardButton(" member keyboard ", callback_data="Q_XUQ"),
+                ],
+                [                
+                    InlineKeyboardButton(" Commands", callback_data="cbcmds"),
+                    InlineKeyboardButton(" Donate", url=f"https://t.me/Y_H_U_4"),
+                ],
+                [
                     InlineKeyboardButton(
-                        "•✯「𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾」، ✯•", url="https://t.me/UI_VM"),
+                        "Group", url=f"https://t.me/Ng_333"
+                    ),
+                    InlineKeyboardButton(
+                        "Channel", url=f"https://t.me/N_G_12"
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉", url="https://t.me/Ng_103"
+                    )
+                ],
+            ]
+        ),
+        disable_web_page_preview=True,
+    )
+
+@Client.on_callback_query(filters.regex("cbhowtouse"))
+async def cbguides(_, query: CallbackQuery):
+    await query.answer("user guide")
+    await query.edit_message_text(
+        f"""📚 **Basic Guide for using this bot:**
+1.) **First, add me to your group.**
+2.) **Then, promote me as administrator and give all permissions except Anonymous Admin.**
+3.) **After promoting me, type /reload in group to refresh the admin data.**
+3.) **Add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.**
+4.) **Turn on the video chat first before start to play video/music.**
+5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
+📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.**
+💎 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}**
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="english")]]
+        ),
+    )
+
+@Client.on_callback_query(filters.regex("Q_XUQ"))
+async def cbguides(_, query: CallbackQuery):
+    await query.answer("user guide")
+    await query.edit_message_text(
+        f"""🐰 **※Welcome \n
+※Show members keyboard Send /ARN \n\n
+※Show entertainment keyboard send /AFYN**
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="english")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("cbcmds"))
+async def cbcmds(_, query: CallbackQuery):
+    await query.answer("commands menu")
+    await query.edit_message_text(
+        f"""🥹♥ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+» **press the button below to read the explanation and see the list of available commands !**
+√ __Powered by ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉 """,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Admin Cmd", callback_data="cbadmin"),
+                    InlineKeyboardButton("Sudo Cmd", callback_data="cbsudo"),
+                ],[
+                    InlineKeyboardButton("Basic Cmd", callback_data="cbbasic")
+                ],[
+                    InlineKeyboardButton("Go Back ", callback_data="english")
                 ],
             ]
         ),
     )
 
 
+@Client.on_callback_query(filters.regex("cbbasic"))
+async def cbbasic(_, query: CallbackQuery):
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f""" here is the basic commands:
+» /play (song name/link) - play music on video chat
+» /vplay (video name/link) - play video on video chat
+» /vstream - play live video from yt live/m3u8
+» /playlist - show you the playlist
+» /video (query) - download video from youtube
+» /song (query) - download song from youtube
+» /lyric (query) - scrap the song lyric
+» /search (query) - search a youtube video link
+» /ping - show the bot ping status
+» /speedtest - run the bot server speedtest
+» /uptime - show the bot uptime status
+» /alive - show the bot alive info (in group)
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+        ),
+    )
 
-@app.on_callback_query(filters.regex("zzzdv") & SUDOERS)
-async def mpdtsf(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""<b>» مرحبـاً بك عـزيـزي المطـور </b>\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
+
+@Client.on_callback_query(filters.regex("cbadmin"))
+async def cbadmin(_, query: CallbackQuery):
+    await query.answer("admin commands")
+    await query.edit_message_text(
+        f""" here is the admin commands:
+» /pause - pause the stream
+» /resume - resume the stream
+» /skip - switch to next stream
+» /stop - stop the streaming
+» /vmute - mute the userbot on voice chat
+» /vunmute - unmute the userbot on voice chat
+» /volume `1-200` - adjust the volume of music (userbot must be admin)
+» /reload - reload bot and refresh the admin data
+» /userbotjoin - invite the userbot to join group
+» /userbotleave - order userbot to leave from group
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+        ),
+    )
+
+@Client.on_callback_query(filters.regex("cbsudo"))
+async def cbsudo(_, query: CallbackQuery):
+    await query.answer("sudo commands")
+    await query.edit_message_text(
+        f""" here is the sudo commands:
+» /rmw - clean all raw files
+» /rmd - clean all downloaded files
+» /sysinfo - show the system information
+» /update - update your bot to latest version
+» /restart - restart your bot
+» /leaveall - order userbot to leave from all group
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("bhowtouse"))
+async def acbguides(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""🎥**طريقة تفعيل البوت في مجموعتك :**
+1.) **اولا قم بإضافة البوت اللي مجموعتك \n√.**
+2.) **قم بترقيى البوت مشرف مع الصلاحيات المطلوبة \n√.**
+3.) ** لتحديث قائمة الادمن /Reload قم بكتابة الامر \n√.**
+3.) ** /uesrbotjoin قم بإضافة الحساب المساعد اللي المجموعة عن طريق كاتبة الامر /انضم او \n√.**
+4.) **تاكد كن تشغيل المحادثة المرئية \n√.**
+5.) ** /Reload اذا واجهت خطأ قم بكتابة الامر \n√.**
+💎 ** في حال لم يستطع الحساب المساعد الانضمام اللي المحادثة المرئية قم بطرد الحساب المساعد بالأمر /غادر \n√.  \n ودعوتة من جديد عنريق الامر /انضم \n√.**
+\n√ **في حال واجهت اي مشكلة اخري يمكنك التواصل مع افيونا من هن : @Q_XUQ **
+\n __ Developer by [ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉](https://t.me/Ng_103)""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("العودة", callback_data="arbic")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("bcmds"))
+async def acbcmds(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""🐰**Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+※ **اتبع الازرار بالاسفل لمعرفة طريقة التشغيل **
+\n __ Developer by [ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉](https://t.me/Ng_103)""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        "• التحـديث •", callback_data="zzzup"),
+                    InlineKeyboardButton("اوامر التشغيل", callback_data="bbasic"),
+                    InlineKeyboardButton("اوامر الادمن", callback_data="badmin"),
                 ],[
-                    InlineKeyboardButton(
-                        "• الـرفــع •", callback_data="zzzsu"),
-                    InlineKeyboardButton(
-                        "• الـحظــر •", callback_data="zzzbn"),
+                    InlineKeyboardButton("اوامر المطورين", callback_data="bsudo")
                 ],[
-                    InlineKeyboardButton(
-                        "• الاشعــارات & المسـاعــد •", callback_data="zzzas"),
-                ],[
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"),
+                    InlineKeyboardButton("العودة", callback_data="arbic")
                 ],
             ]
         ),
     )
 
 
-
-@app.on_callback_query(filters.regex("zzzll"))
-async def zzzll(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر الـتشغـيـل :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-تشغيل + (اسم الاغنية / رابط الاغنية)
-<b>- لــ تـشـغـيل اغـنـيـة فـي الـمكـالـمـة الـصـوتـيـة</b>
-
-/vplay + (اسم المقـطـع / رابط المقـطـع)
-<b>- لــ تـشـغـيل فيـديـو فـي الـمكـالـمـة المـرئيـة</b>
-
-تحميل + الاسـم
-<b>- لـ تحميـل الاغانـي والمقـاطـع الصوتيـه مـن اليوتيـوب</b>
-
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"),
-               ],
-          ]
+@Client.on_callback_query(filters.regex("bbasic"))
+async def acbbasic(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""اوامر التشغيل :
+» /play (اسم الموسيقي / link ) - لتشغيل الموسيقى في المحادثة الصوتية 
+» /stream ( قم بالرد علي الملف /link) - لتشغيل مقطع فيديو موجود في الدردشة
+» /vplay (اسم الفيديو /link) - لتشغيل مقطع فيديو 
+» /vstream - لنشغيل بث مباشر
+» /playlist - لعرض قائمة التشغيل
+» /video - لتحميل مقطع فيديو
+» /song - لتحميل ملف صوتي 
+» /lyric - لجلب كلمات الاغنية 
+» /search - البحث عن روابط يوتيوب
+» /ping - عرض سرعة الاستجابة
+» /uptime - وقت تشغيل البوت
+» /alive - لعرض معلومات البوت 
+\n __ Developer by [ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉](https://t.me/Ng_103)""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
         ),
     )
 
 
-
-@app.on_callback_query(filters.regex("zzzad"))
-async def zzzad(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر الادمــن :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-
-الاعدادات
-<b>- لـ عـرض إعـدادات اوضـاع التشغيـل</b>
-
-ايقاف / انهاء / اسكت
-<b>- لـ إيقـاف تـشغـيـل الـمـوسـيـقـى فـي المكـالمـة</b>
-
-وقف / توقف
-<b>- لـ إيقـاف تشغيـل الموسيـقـى فـي المكالمـة مـؤقتـاً</b>
-
-كمل / كملي
-<b>- لـ إسـتـئـنـاف تـشغـيـل الـمـوسـيـقـى فـي المكـالمـة</b>
-
-تخطي
-<b>- لـ تخطـي الاغنيـة وتشغيـل الاغنيـة التاليـه</b>
-
-الاغاني
-<b>- لـ معـرفـة الاغـانـي المـوجـودة فـي قائمـة الانتظـار</b>
-
-بنج
-<b>- لـ عـرض سـرعـة تشغيـل البـوت</b>
-
-رفع ادمن/تنزيل ادمن
-<b>- لـ رفـع/تنزيـل ادمـن فـي البـوت</b>
-
-الادمنيه
-<b>- لـ عـرض قائمـة ادمنيـة البـوت</b>
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"),
-               ],
-          ]
+@Client.on_callback_query(filters.regex("badmin"))
+async def acbadmin(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""اوامر التحكم للخاصة بالادمنية:
+» /pause - ايقاف التشغيل موقتأ
+» /resume - لاستكمال التشغيل
+» /skip - لتخطي تشغيل الحالي
+» /stop - لايقاف تشغيل الحالي
+» /vmute - لكتم الحساب المساعد في المحادثة الصوتية
+» /vunmute - الغاء كتم الحساب المساعد
+» /volume `1-200` - لتحكم في درجة الصوت
+» /reload - لتحديث قائمة الادمن للتحكم في البوت
+» /userbotjoin - لدعوة الحساب المساعد للدردشة
+» /userbotleave - لطرد الحساب المساعد من الدردشة
+\n __ Developer by [ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉](https://t.me/Ng_103)""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
         ),
     )
-
-
-
-@app.on_callback_query(filters.regex("zzzch"))
-async def zzzch(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر التشغيــل فـي القنــاة :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-<b>- ارفـع البـوت إشـراف في القنـاة و شغـل مباشـر</b>
-<b>- ارسـل (/channelplay او ربط) + يـوزر القنـاة لـ الربـط</b>
-<b>- ثم استخـدم الاوامــر بالاسفـل لـ التشغيـل</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-تشغيل + اسم الاغنية
-<b>- لــ تـشـغـيل اغـنـيـة فـي الـمكـالـمـة الـصـوتـيـة</b>
-
-فيديو + اسم المقـطـع
-<b>- لــ تـشـغـيل فيـديـو فـي الـمكـالـمـة المـرئيـة</b>
-
-ايقاف / انهاء / اسكت
-<b>- لـ إيقـاف تـشغـيـل الـمـوسـيـقـى فـي المكـالمـة</b>
-
-وقف / توقف
-<b>- لـ إيقـاف تشغيـل الموسيـقـى فـي المكالمـة مـؤقتـاً</b>
-
-كمل / استئناف
-<b>- لـ إسـتـئـنـاف تـشغـيـل الـمـوسـيـقـى فـي المكـالمـة</b>
-
-تخطي
-<b>- لـ تخطـي الاغنيـة وتشغيـل الاغنيـة التاليـه</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-/seek + عـدد الثـوانـي
-<b>- لـ تقديـم الاغنيـه لـ الامـام</b>
-/seekback + عـدد الثـوانـي
-<b>- لـ إرجـاع الاغنيـه لـ الخـلف</b>
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"),
-               ],
-          ]
-        ),
-    )
-
-
-
-@app.on_callback_query(filters.regex("zzzup") & SUDOERS)
-async def zzzup(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر المطــور :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-<b>- قائمــة اوامــر التحـديثـات :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-
-السجلات
-<b>- لـ جلب سجـلات البـوت 📋</b>
-
-تحديث
-<b>- لـ تحديـث البــوت</b>
-
-اعاده تشغيل
-<b>- لـ اعـادة تشغيـل البــوت</b>
-
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzdv"),
-               ],
-          ]
-        ),
-    )
-
-
-
-@app.on_callback_query(filters.regex("zzzsu") & SUDOERS)
-async def zzzsu(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر المطــور :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-<b>- قائمــة اوامــر الـرفــع :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-
-رفع مطور/تنزيل مطور
-<b>- لـ رفـع/تنزيـل شخـص مطـور فـي ميـوزك البـوت</b>
-
-المطورين
-<b>- لـ عـرض قائمـة مطـورين البـوت</b>
-
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzdv"),
-               ],
-          ]
-        ),
-    )
-
-
-
-@app.on_callback_query(filters.regex("zzzbn") & SUDOERS)
-async def zzzbn(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر المطــور :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-<b>- قائمــة اوامــر الحظــر :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-
-بلوك/الغاء بلوك/المبلكين
-<b>- لـ حظـر/الغـاء حظـر شخـص من استخـدام ميـوزك البـوت</b>
-
-احظره عام/الغاء حظره عام
-<b>- لـ حظـر/الغـاء حظـر شخـص من استخـدام ميـوزك البـوت عـام</b>
-
-المحظورين عام
-<b>- لـ جلب قائمـة المحظـورين عـام فـي البـوت</b>
-
-حظر مجموعة/سماح
-<b>- لـ حظـر/الغـاء حظـر مجموعـة من استخـدام ميـوزك البـوت</b>
-
-المجموعات المحظورة
-<b>- لـ جلب قائمـة بالمجمـوعـات المحظـورة مـن استـخـدام البـوت</b>
-
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzdv"),
-               ],
-          ]
-        ),
-    )
-
-
-@app.on_callback_query(filters.regex("zzzas") & SUDOERS)
-async def zzzas(_, query: CallbackQuery):
-   await query.edit_message_text(
-       f"""
-● <b>قائمــة اوامــر المطــور :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-<b>- قائمــة اوامــر المســاعــد ✅ :</b>
-ٴ⋆┄─┄─┄─┄─┄─┄─┄─┄⋆
-
-السجل [ تفعيل / تعطيل ]
-<b>- لـ تفعيـل/تعطيـل اشعـارات مجموعـة سجـل البــوت</b>
-
-المغادره التلقائيه تفعيل/تعطيل
-<b>- لـ تفعيـل/تعطيـل المغـادره التلقائيـه لـ الحسـاب المسـاعـد مـن المجمـوعـات عنـد عـدم استـخـدام الميـوزك</b>
-
-""",
-       reply_markup=InlineKeyboardMarkup(
-          [
-               [
-                    InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzdv"),
-               ],
-          ]
-        ),
-   )
     
-    
+@Client.on_callback_query(filters.regex("afyona"))
+async def acbadmin(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""※ مرحبا بك \n ※ لتفعيل كيبورد الاعضاء ارسل /ARN \n ※ لتفعيل كيبورد التسليه ارسل /AFYN""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
+        ),
+    )
+
+@Client.on_callback_query(filters.regex("bsudo"))
+async def acbsudo(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""اوامر المطورين :
+» /rmw - لمسح جميع الملفات المتخزنة
+» /rmd - تنظيف التخزين المؤقت
+» /sysinfo - لعرض قدرات التشغيل
+» /update - لتحديث اصدار السورس
+» /restart - إعادة تشغيل البوت
+» /leaveall - خروج الحساب المساعد من جميع المحادثات
+\n__ Developer by [ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉](https://t.me/Ng_103)""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("العودة", callback_data="bcmds")]]
+        ),
+    )
+
+@Client.on_callback_query(filters.regex("Ng_103"))
+async def acbadmin(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""<b> يمكنك التواصل معي \n عن طريق معرفي اول جروب التواصل بلاسفل..↑↓ \n\n [ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉](https://t.me/Ng_103)</b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("القناة", url=f"https://t.me/N_G_12"),
+                    InlineKeyboardButton("الجروب", url=f"https://t.me/Ng_333"),
+                ],
+                [
+                    InlineKeyboardButton("البوت", url=f"https://t.me/Y_H_U_5_BOT"),
+                    InlineKeyboardButton("التواصل", url=f"https://t.me/Tawasol96bot"),
+                ],
+                [InlineKeyboardButton("ᖴ᥆ᖇ ꪀᥲ️ժᥱᖇ. 🐉", url=f"https://t.me/Ng_103")],
+            ]
+        ),
+    )
