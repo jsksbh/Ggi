@@ -28,10 +28,8 @@ caption=f"""**[᥉ᥱᥣᥣᥴƚ ᥣᥲ️ꪀᘜυᥲ️ᘜᥱ ƚ᥆ ᥣᥱᥲ�
             [
                 [
                 InlineKeyboardButton(
-                    "عربي 🇪🇬", callback_data="arbic"
-                ),
-                ],
-                [
+                    "عربي 🇪🇬", callback_data="arbic"),
+                    
                     InlineKeyboardButton(
                         "English 🇺🇲", callback_data="english"),
                 ],
