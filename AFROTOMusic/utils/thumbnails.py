@@ -125,19 +125,6 @@ async def get_thumb(videoid):
             font=font,
         )
             
-
-            image4.text((670, 450), text=views, fill="white", font=font4, align="left")
-            image4.text(
-                (670, 500), text=duration, fill="white", font=font4, align="left"
-            )
-            image4.text(
-                (670, 550), text=channel, fill="white", font=font4, align="left"
-            )
-
-            image2 = ImageOps.expand(image2, border=20, fill=make_col())
-            image2 = image2.convert("RGB")
-            image2.save(f"cache/{videoid}.jpg")
-            file = f"cache/{videoid}.jpg"
             return file
     except Exception as e:
         print(e)
