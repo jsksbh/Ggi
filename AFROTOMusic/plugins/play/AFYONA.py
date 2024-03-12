@@ -14,7 +14,7 @@ from pyrogram.types import (
 from AFROTOMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
-REPLY_MESSAGE = "**صلي علي اشرف خلق الله 🥹✨*"
+REPLY_MESSAGE = "صلي علي النبي وتبسم ♥️✨"
 
 
 
@@ -22,7 +22,7 @@ REPLY_MESSAGE = "**صلي علي اشرف خلق الله 🥹✨*"
 REPLY_MESSAGE_BUTTONS = [
     [
         ("السورس"),
-        ("الاوامر")
+         ("صوره")
     ],
     
     [
@@ -35,7 +35,7 @@ REPLY_MESSAGE_BUTTONS = [
     ],
    
     [
-        ("تويت"),
+         ("كت"),
         ("صراحه")
     ],
     [
@@ -46,10 +46,11 @@ REPLY_MESSAGE_BUTTONS = [
         ("كتابات")
     ],
     [
-        ("اذكار")
+        ("اذكار"),
+        ("قران") 
     ],
     [
-        ("زخارف"),
+         ("شعر"),
         ("انصحني")
     ],
     [
@@ -87,12 +88,12 @@ async def down(client, message):
 @app.on_message(filters.regex("يـوتيوب. 📽"))
 def reply_to_HEY(Client, message):
     message.reply_photo(
-        photo=f"https://telegra.ph/file/04b2f1f1c808dc49db35b.jpg",
+        photo=f"https://www12.0zz0.com/2024/03/07/17/197295459.jpg",
         caption=f"""**يتم استخدام هذا الامر لعرض تحميل من اليوتيوب**\n**استخدم الامر بهذا الشكل** `تنزيل` ** او ** `يوتيوب` ** كمثل تنزيل سوره الرحمن اضغط علي الامر لنسخ والاستخدام**""",
         reply_markup=InlineKeyboardMarkup(
             [
             [
-                InlineKeyboardButton("ᯓ 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𖠛", url=f"https://t.me/UI_VM"),
+                InlineKeyboardButton("ᯓ S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼 𖠛", url=f"https://t.me/K_o_c_3"),
             ]
          ]
      )
