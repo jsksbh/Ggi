@@ -65,7 +65,7 @@ async def zzzback(_, query: CallbackQuery):
                             " اوامــر المطــور ", callback_data="zzzdv"),
                 ],[ 
                     InlineKeyboardButton(
-                        "•✯「𝚂𝙾𝚞𝚁𝚂 𝚅𝙴𝙽𝙾𝙼♪」، ✯•", url="https://t.me/K_o_c_3"),
+                        "𝗦𝗼𝘂𝗿𝗰𝗲ᯓ𝗩𝗘𝗡𝗢𝗠𖠛", url="https://t.me/K_o_c_3"),
                 ],
             ]
         ),
