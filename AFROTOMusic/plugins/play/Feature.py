@@ -14,12 +14,12 @@ from AFROTOMusic import app
 from random import  choice, randint
 
 @app.on_message(
-    filters.command(["مميزات","مميزات عفرتو"], "")
+    filters.command(["مميزات","مميزات فينوم "], "")
 & filters.group
  )
 async def mmmezat(client, message):
         await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس زد إي ميوزك\n
-⩹━★⊷⌯⌞ # 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 ⌝⌯⊶★━⩺
+⩹━★⊷⌯⌞ # S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼 ⌝⌯⊶★━⩺
 
 ★قايمه مميزات سورس عفرتو
 
@@ -58,12 +58,12 @@ async def mmmezat(client, message):
 ★ميزه ⦂ فنان+اكتب اسم فنان و هتجبلك اغانيه
 ★ميزه ⦂ اصدار+حول
 
-⩹━★⊷⌯⌞ # 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𖠛 ⌝⌯⊶★━⩺""",
+⩹━★⊷⌯⌞ # S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼 𖠛 ⌝⌯⊶★━⩺""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "# 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𖠛⌝⚡", url=f"https://t.me/UI_VM"),                        
+                        "# S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼 𖠛⌝⚡", url=f"https://t.me/K_o_c_3"),                        
                  ],[
                 InlineKeyboardButton(
                         "close", callback_data="close"),
