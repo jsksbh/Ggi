@@ -19,7 +19,7 @@ from random import  choice, randint
 )
 async def yas(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/96857cb597b588139fdd5.jpg",
+        photo=f"https://www.kapwing.com/videos/65edbf085a906dfa38387bbc",
         caption=f"""◉ 𝙽𝙰𝙼𝙴 : ❪[ْ𓆩⧛𑲯𑲯𑲯𑲯𑲯𑲯𑲯𓌹𖤍𖣩ًََِْٓ ✹⃝‌꙰🇪🇬 𝐕𝐄𝐍𝐎𝐌☬『‌مــمول』⧚𓆪](https://t.me/K_o_c_1)❫
 ◉ 𝚄𝚂𝙴𝚁 : ❪ @K_o_c_1 ❫
 ◉ 𝙸𝙳      : ❪ `5904216848` ❫
