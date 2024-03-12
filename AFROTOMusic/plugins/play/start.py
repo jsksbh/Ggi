@@ -22,7 +22,7 @@ from AFROTOMusic.utils.decorators.language import LanguageStart
 )
 async def khalid(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/c6c72a67afca445b3175a.jpg",
+        photo=f"https://www7.0zz0.com/2024/02/28/05/415560079.jpg",
 caption=f"""**[᥉ᥱᥣᥣᥴƚ ᥣᥲ️ꪀᘜυᥲ️ᘜᥱ ƚ᥆ ᥣᥱᥲ️ᖇꪀ ꪔ᥆ᖇᥱ](https://t.me/N_G_12)**""",
         reply_markup=InlineKeyboardMarkup(
             [
