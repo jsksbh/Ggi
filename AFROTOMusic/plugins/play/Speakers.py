@@ -87,16 +87,16 @@ async def brah2(client, message):
         else:
             await message.reply(f" ↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {day[0]}. ")
 @app.on_message(filters.video_chat_members_invited)
-async def fuckoff(client, message):
-           text = f"• قــــام ← {message.from_user.mention}"
+async def mevegaa(client: Client, message: Message): 
+           text = f"↯︙قام الشخص ↫ ⦗ {message.from_user.mention} ⦘"
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
-               text += f"\n• بــدعـــوة ←[{user.first_name}](tg://user?id={user.first_name})"
+               text += f"\n↯︙بدعوة شخص الى المحادثة المرئية ↫ ⦗ {user.first_name} ⦘"
                x += 1
              except Exception:
                pass
            try:
              await message.reply(f"{text}")
            except:
-             pass  
+             pass
