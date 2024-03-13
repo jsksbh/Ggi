@@ -124,11 +124,11 @@ async def get_thumb(videoid):
 
             image4 = ImageDraw.Draw(image2)
             image4.text(
-                (10, 10), "AFROTOO MUSIC ", fill="white", font=font1, align="left"
+                (10, 10), "Source Venom", fill="white", font=font1, align="left"
             )
             image4.text(
                 (670, 150),
-                "AFROTOO MUSIC",
+                "Source Venom",
                 fill="white",
                 font=font2,
                 stroke_width=4,
@@ -160,7 +160,7 @@ async def get_thumb(videoid):
             # description
             views = f"Views : {views}"
             duration = f"Duration : {duration} Mins"
-            channel = f"Channel : @UI_VM"
+            channel = f"Channel : @K_o_c_3"
 
             image4.text((670, 450), text=views, fill="white", font=font4, align="left")
             image4.text(
