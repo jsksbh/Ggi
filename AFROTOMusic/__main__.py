@@ -37,24 +37,24 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("AFROTOMusic.plugins" + all_module)
-    LOGGER("ميــوزك عفرتو").info("تم تحميل الاضافات ...✓")
+    LOGGER("ميــوزك فينوم").info("تم تحميل الاضافات ...✓")
     await userbot.start()
     await Zelzaly.start()
     try:
         await Zelzaly.stream_call("https://telegra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        LOGGER("ميــوزك عفرتو").info(
+        LOGGER("ميــوزك فينوم").info(
             "خطأ .. قم بفتح المكالمة في مجموعة السجل الخاصه بك\n\nجارِ ايقاف بوت الميوزك . . ."
         )
         exit()
     except:
         pass
     await Zelzaly.decorators()
-    LOGGER("ميــوزك عفرتو").info("MatrixThon")
+    LOGGER("ميــوزك فينوم").info("MatrixThon")
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("ميــوزك عفرتو").info("جارِ ايقاف بوت الميوزك . . .")
+    LOGGER("ميــوزك فينوم").info("جارِ ايقاف بوت الميوزك . . .")
 
 
 if __name__ == "__main__":
