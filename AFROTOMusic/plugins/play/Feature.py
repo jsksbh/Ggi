@@ -18,7 +18,7 @@ from random import  choice, randint
 & filters.group
  )
 async def mmmezat(client, message):
-        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس زد إي ميوزك\n
+        await message.reply_text(f"""**مرحبآ بك عزيزي » {message.from_user.mention}**في قسم مميزات سورس فينوم ميوزك\n
 ⩹━★⊷⌯⌞ # S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼 ⌝⌯⊶★━⩺
 
 ★قايمه مميزات سورس عفرتو
@@ -63,7 +63,7 @@ async def mmmezat(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "# S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼 𖠛⌝⚡", url=f"https://t.me/K_o_c_3"),                        
+                        "# S𝙾𝚞𝚁𝙲𝙴 V𝙴𝙽𝙾𝙼⚡", url=f"https://t.me/K_o_c_3"),                        
                  ],[
                 InlineKeyboardButton(
                         "close", callback_data="close"),
