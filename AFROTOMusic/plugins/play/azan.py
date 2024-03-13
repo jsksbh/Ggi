@@ -34,7 +34,7 @@ async def azaan(c, msg):
   elif msg.text == "تعطيل الاذان":
     if msg.chat.id in chat:
       chat.remove(msg.chat.id)
-      return await msg.reply_text("تم تعطيل الاذان")
+      return await msg.reply_text("تم تفعيل الاذان ♥️🌿")
     else:
       return await msg.reply_text("- الاذان متعطله اصلا يسطا")
       
