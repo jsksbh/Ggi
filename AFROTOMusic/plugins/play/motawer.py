@@ -16,7 +16,7 @@ async def zdatsr(client: Client, message: Message):
     name = usr.first_name
     usrnam = usr.username
     await message.reply_video(
-        video=f"https://telegra.ph/file/0913f5246d0532e170e21.mp4",
+        video=f"https://telegra.ph/file/442ea597b1a9cd06df6e3.mp4",
         caption=f"""<b>» مرحبـاً بك عـزيـزي </b> {message.from_user.mention} .\n\n<b>» هذا هو حساب مطور البوت</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -24,7 +24,7 @@ async def zdatsr(client: Client, message: Message):
                     InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
                 ],[
                     InlineKeyboardButton(
-                        "ᯓ 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𝅘𝅥𝅯•", url="https://t.me/UI_VM"),
+                        "ᯓ⭓𝙼𝚄𝚂𝙸𝙲✘𝚅𝙴𝙽𝙾𝙼♪𝅘𝅥𝅯•", url="https://t.me/K_o_c_3"),
                 ],
             ]
         ),
