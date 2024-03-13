@@ -1,0 +1,13 @@
+listvidquran = []
+@Client.on_message(filters.command(["ستوري قران","استوري","حلات واتس قران"], ""))
+async def qurann(client, message):
+  if not message.chat.type == enums.ChatType.PRIVATE:
+    await joinch(message)
+  if len(listvidquran) == 0:
+   user = await get_userbot(client.me.username)
+   async for msg in user.get_chat_history("a9li91"):
+      if msg.video:
+        listvidquran.append(msg.id)
+  id = random.choice(listvidquran)
+  video = f"https://t.me/a9li91/{id}"
+  await message.reply_video(video=video, caption="♪ 𝑱𝒐𝒊𝒏 ➧ @V_0_1_Vbot  🚦 .")
