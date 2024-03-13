@@ -39,7 +39,7 @@ async def cr_source(client: Client, message: Message):
                      " اوامــر المطــور ", callback_data="zzzdv"),
                  ],[
                     InlineKeyboardButton(
-                        "•✯ ᯓ 「𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾」، ⦃𓏛 ✯•", url="https://t.me/UI_VM"),
+                        "•✯ ᯓ 「𝚂𝙾𝚞𝚁𝚂 VENOM」، ⦃𓏛 ✯•", url="https://t.me/K_o_c_3"),
                 ],
             ]
         ),
@@ -65,7 +65,7 @@ async def zzzback(_, query: CallbackQuery):
                             " اوامــر المطــور ", callback_data="zzzdv"),
                 ],[ 
                     InlineKeyboardButton(
-                        "•✯「𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾」، ✯•", url="https://t.me/UI_VM"),
+                        "•✯「𝚂𝙾𝚞𝚁𝚂 VENOM」، ✯•", url="https://t.me/K_o_c_3"),
                 ],
             ]
         ),
