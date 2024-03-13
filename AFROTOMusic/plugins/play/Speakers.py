@@ -60,29 +60,29 @@ async def brah2(client, message):
     if da < 60:
        await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {da}. ")        
     elif 60 < da < 3600:
-        if 1 <= ma[0] <:
+        if 1 <= ma[0] <1:
             await message.reply(f" ↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘")
-        elif 2 <= ma[0] <:
+        elif 2 <= ma[0] <1:
             await message.reply(f" ↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ ")
-        elif 3 <= ma[0] < :
+        elif 3 <= ma[0] <1:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {ma[0]}. ")  
         else:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘{ma[0]}. ")
     elif 3600 < da < 86400:
-        if 1 <= ho[0] < :
+        if 1 <= ho[0] <1:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ ")
-        elif 2 <= ho[0] < :
+        elif 2 <= ho[0] <1:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ ")
-        elif 3 <= ho[0] < :
+        elif 3 <= ho[0] <1:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {ho[0]}. ")  
         else:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {ho[0]}. ")
     else:
-        if 1 <= day[0] < :
+        if 1 <= day[0] <1:
             await message.reply(f"↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ ")
-        elif 2 <= day[0] < :
+        elif 2 <= day[0]<1:
             await message.reply(f" ↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ ")
-        elif 3 <= day[0] < :
+        elif 3 <= day[0] <1:
             await message.reply(f" ↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {day[0]}. ")  
         else:
             await message.reply(f" ↯︙تم ايقاف ↫ ⦗ المحادثة المرئية ⦘ {day[0]}. ")
