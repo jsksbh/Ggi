@@ -1,8 +1,8 @@
-@app.on_message(filters.command(["استوري", "استوريهات🥹"], ""))
+@app.on_message(filters.command(["استوري🥹", "استوريهات"], ""))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,148)
-    url = f"https://t.me/HH_bva/{rl}"
-    await client.send_audio(message.chat.id,url,caption="➧ 𝙅𝙊𝙄𝙉 |⌯ ˼ @K_o_c_3 ˹🐉˼",
+    url = f"https://t.me/yoipopl/{rl}"
+    await client.send_audio(message.chat.id,url,caption="➧ 𝙅𝙊𝙄𝙉 |⌯ ˼ @V_0_1_Vbot ˹🐉˼",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
