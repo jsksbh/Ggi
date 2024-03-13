@@ -39,7 +39,7 @@ REPLY_MESSAGE_BUTTONS = [
         ("صراحه")
     ],
     [
-        ("احكام")
+        ("استوري🥹")
     ],
     [
         ("نكته"),
@@ -54,7 +54,7 @@ REPLY_MESSAGE_BUTTONS = [
         ("انصحني")
     ],
     [
-        ("يـوتيوب. 📽")
+         ("احكام")
         
     ],
     [
@@ -85,7 +85,7 @@ async def down(client, message):
           m = await message.reply("**تم قفل الكيبورد بنجاح**", reply_markup= ReplyKeyboardRemove(selective=True))
 
 
-@app.on_message(filters.regex("يـوتيوب. 📽"))
+@app.on_message(filters.regex("يوتيوب"))
 def reply_to_HEY(Client, message):
     message.reply_photo(
         photo=f"https://www12.0zz0.com/2024/03/07/17/197295459.jpg",
