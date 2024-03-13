@@ -13,12 +13,12 @@ def start_panel(_):
          [InlineKeyboardButton(text=_["S_B_4"], callback_data="zzzback")],
         [
             InlineKeyboardButton(text="CHANNEL", url=config.SUPPORT_CHANNEL),
-            InlineKeyboardButton(text="GROUP", url=f"https://t.me/YR_HX"),
+            InlineKeyboardButton(text="GROUP", url=f"https://t.me/q1_b1"),
         ],
         [
          
             InlineKeyboardButton(
-                text="⭓ADD✘ME ♪",
+                text=< ضف البوت لمجموعتك >",
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
@@ -35,12 +35,12 @@ def private_panel(_):
          [InlineKeyboardButton(text=_["S_B_4"], callback_data="zzzback")],
         [
             InlineKeyboardButton(text="CHANNEL", url=config.SUPPORT_CHANNEL),
-            InlineKeyboardButton(text="GROUP", url=f"https://t.me/YR_HX"),
+            InlineKeyboardButton(text="GROUP", url=f"https://t.me/q1_b1"),
         ],
         [
          
             InlineKeyboardButton(
-                text="⭓ADD✘ME ♪",
+                text="< ضف البوت لمجموعتك >",
                 url=f"https://t.me/{app.username}?startgroup=true",
             )
         ],
