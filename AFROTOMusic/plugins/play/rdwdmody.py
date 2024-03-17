@@ -424,7 +424,7 @@ async def caesar(client: Client, message: Message):
 
         f"{a}")   
 
-qqhtxt = [txt = [
+tthtxt = [
 " انت الي حلو ياقمر 🤤🌝"
         ]
 
