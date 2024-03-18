@@ -9,7 +9,7 @@ import random
 @app.on_message(command([f"صوره", "صورة", "صور"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
-    url = f"https://t.me/vnnkli/{rl}"
+    url = f"https://t.me/YVb_hbs/{rl}"
     await client.send_photo(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الصوره لـك",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -24,7 +24,7 @@ async def ihd(client: Client, message: Message):
 @app.on_message(command([f"استوريهات", "استوري"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
-    url = f"https://t.me/yoipopl{rl}"
+    url = f"https://t.me/HH_bva/{rl}"
     await client.send_audio(message.chat.id,url,caption="🔥 ¦ تـم اختيـار الاستوري  لـك",
     reply_markup=InlineKeyboardMarkup(
             [
