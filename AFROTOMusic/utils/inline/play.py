@@ -70,7 +70,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(text="𝚂𝙺𝙸𝙿 ‌", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="𝚂𝚃𝙾𝙿 ", callback_data=f"ADMIN Stop|{chat_id}"),
         ],[    
-            InlineKeyboardButton(text="مطور البوت⚡️⋅", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="مطور البوت🥀⋅", user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text=" اضف البوت الي مجموعتك او قناتك ", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
@@ -87,7 +87,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="𝚂𝙺𝙸𝙿 ‌", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="𝚂𝚃𝙾𝙿 ", callback_data=f"ADMIN Stop|{chat_id}"),
         ],[
-            InlineKeyboardButton(text="مطور البوت⚡️⋅", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="مطور البوت🥀⋅", user_id=config.OWNER_ID),
         ],[
             InlineKeyboardButton(text="داضف البوت الي مجموعتك او قناتك ", url=f"https://t.me/{app.username}?startgroup=true")],
     ]
